@@ -1,0 +1,12 @@
+body {
+  margin: 0px;
+}
+
+#mainBackground {
+  background-image: url("./photos/aditya_car.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}

@@ -1,0 +1,27 @@
+.navbarItemOutline {
+  border: white;
+  border-style: solid;
+  border-width: 1px;
+  width: 85px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbarItem {
+  font-family: "Source Sans Pro";
+  font-size: 21px;
+  font-weight: 300;
+  color: white;
+  line-height: 1;
+}
+
+#navbarWrapper {
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+}
