@@ -1,9 +1,15 @@
 import React, { Component } from "react";
+import Navbar from "../components/navbar/Navbar";
 
 class MusicPage extends Component {
   state = {};
   render() {
-    return <div>Music</div>;
+    return (
+      <div>
+        <Navbar />
+        <div id="mainBackground"></div>
+      </div>
+    );
   }
 }
 

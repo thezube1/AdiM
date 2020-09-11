@@ -1,5 +1,23 @@
-body {
-  margin: 0px;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 250px;
+}
+
+.mainHeader {
+  font-family: "Source Sans Pro";
+  font-weight: 900;
+  font-style: italic;
+  font-size: 80px;
+  color: black;
+}
+
+.mainText {
+  font-family: "Quicksand";
+  font-weight: 300;
+  font-size: 30px;
+  color: black;
 }
 
 #mainBackground {
@@ -7,20 +25,52 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
-  width: 100vw;
-}
-
-#backgroundTextWrapper {
-  position: absolute;
-  bottom: 0;
-  right: 10px;
+  width: 100%;
 }
 
 #backgroundText {
   font-family: "Source Sans Pro";
   font-weight: 900;
-  font-size: 300px;
+  font-size: 500px;
   color: white;
-  line-height: 1;
+  position: absolute;
+  bottom: -145px;
+  right: 0px;
+}
+
+#mainAboutWrapper {
+  margin-top: 300px;
+  display: grid;
+  grid-template-columns: 600px 400px;
+  justify-content: center;
+}
+
+#mainAboutImage {
+  max-width: 600px;
+  z-index: 0;
+}
+
+#mainAboutHeader {
+  margin-top: 220px;
+  width: max-content;
+  color: rgb(24, 172, 226);
+  font-size: 120px;
+  position: relative;
+  right: 90px;
+}
+
+#mainAboutText {
+  width: 400px;
+  font-weight: 300;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 2000px) {
+  #backgroundText {
+    font-size: 400px;
+    bottom: -115px;
+  }
 }

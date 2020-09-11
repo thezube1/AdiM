@@ -1,26 +1,53 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./navbar.css";
+import { motion } from "framer-motion";
+import NavbarItem from "./NavbarItem";
 
 class Navbar extends Component {
-  state = {};
+  state = {
+    color: "white",
+  };
+
+  handleLocation = () => {
+    switch (window.location.pathname) {
+      case "/":
+        return -17;
+      case "/about":
+        return 60;
+      case "/music":
+        return 135;
+      case "/contact":
+        return 218;
+      default:
+        return -17;
+    }
+  };
+
+  listenScrollEvent = () => {
+    if (window.pageYOffset > 800) {
+      this.setState({ color: "black" });
+    } else {
+      this.setState({ color: "white" });
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.listenScrollEvent);
+  }
+
   render() {
     return (
       <div id="navbarWrapper">
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <div className="navbarItemOutline">
-            <div className="navbarItem">Home</div>
-          </div>
-        </Link>
-        <Link to="/about" style={{ textDecoration: "none" }}>
-          <div className="navbarItem">About</div>
-        </Link>
-        <Link to="/music" style={{ textDecoration: "none" }}>
-          <div className="navbarItem">Music</div>
-        </Link>
-        <Link to="/contact" style={{ textDecoration: "none" }}>
-          <div className="navbarItem">Contact</div>
-        </Link>
+        <motion.div
+          animate={{ x: this.handleLocation() }}
+          className="navbarItemOutline"
+          style={{ borderColor: this.state.color }}
+        ></motion.div>
+        <NavbarItem to="/" item="Home" />
+        <NavbarItem to="/about" item="About" />
+        <NavbarItem to="/music" item="Music" />
+        <NavbarItem to="/contact" item="Contact" />
+        <div id="navbarSocialContent">Shit</div>
       </div>
     );
   }

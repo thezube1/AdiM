@@ -4,16 +4,14 @@
   border-width: 1px;
   width: 85px;
   height: 26px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
 }
 
 .navbarItem {
   font-family: "Source Sans Pro";
   font-size: 21px;
   font-weight: 300;
-  color: white;
+
   line-height: 1;
 }
 
@@ -22,6 +20,10 @@
   position: fixed;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   padding: 30px;
+}
+
+#navbarSocialContent {
+  margin-left: auto;
 }

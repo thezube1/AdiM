@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 
+import AboutContent from "./components/home/AboutContent";
+
 class App extends Component {
   state = {};
   render() {
+    console.log(window.pageYOffset);
     return (
       <div>
         <Navbar />
@@ -13,6 +16,7 @@ class App extends Component {
             <span id="backgroundText">ADI</span>
           </div>
         </div>
+        <AboutContent />
       </div>
     );
   }
