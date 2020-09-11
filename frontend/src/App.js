@@ -6,8 +6,13 @@ class App extends Component {
   state = {};
   render() {
     return (
-      <div id="mainBackground">
+      <div>
         <Navbar />
+        <div id="mainBackground">
+          <div id="backgroundTextWrapper">
+            <span id="backgroundText">ADI</span>
+          </div>
+        </div>
       </div>
     );
   }

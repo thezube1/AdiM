@@ -7,12 +7,20 @@ class Navbar extends Component {
   render() {
     return (
       <div id="navbarWrapper">
-        <div className="navbarItemOutline">
-          <div className="navbarItem">Home</div>
-        </div>
-        <div className="navbarItem">About</div>
-        <div className="navbarItem">Music</div>
-        <div className="navbarItem">Contact</div>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <div className="navbarItemOutline">
+            <div className="navbarItem">Home</div>
+          </div>
+        </Link>
+        <Link to="/about" style={{ textDecoration: "none" }}>
+          <div className="navbarItem">About</div>
+        </Link>
+        <Link to="/music" style={{ textDecoration: "none" }}>
+          <div className="navbarItem">Music</div>
+        </Link>
+        <Link to="/contact" style={{ textDecoration: "none" }}>
+          <div className="navbarItem">Contact</div>
+        </Link>
       </div>
     );
   }
