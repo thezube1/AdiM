@@ -1,53 +1,70 @@
 import React, { Component } from "react";
 import "./navbar.css";
-import { motion } from "framer-motion";
 import NavbarItem from "./NavbarItem";
 
+import { FaInstagram, FaTwitter, FaSpotify } from "react-icons/fa";
+
 class Navbar extends Component {
-  state = {
-    color: "white",
-  };
-
-  handleLocation = () => {
-    switch (window.location.pathname) {
-      case "/":
-        return -17;
-      case "/about":
-        return 60;
-      case "/music":
-        return 135;
-      case "/contact":
-        return 218;
-      default:
-        return -17;
-    }
-  };
-
-  listenScrollEvent = () => {
-    if (window.pageYOffset > 800) {
-      this.setState({ color: "black" });
-    } else {
-      this.setState({ color: "white" });
-    }
-  };
+  state = {};
 
   componentDidMount() {
-    window.addEventListener("scroll", this.listenScrollEvent);
+    window.addEventListener("scroll", this.handleScroll);
   }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const socials = document.querySelectorAll(".navbarSocial");
+    if (window.scrollY > 20) {
+      document.querySelector(".navbarWrapper").className =
+        "navbarWrapper scroll";
+      for (let i = 0; i < socials.length; i++) {
+        socials[i].className = "navbarSocial scroll2";
+      }
+    } else {
+      for (let i = 0; i < socials.length; i++) {
+        socials[i].className = "navbarSocial";
+      }
+      document.querySelector(".navbarWrapper").className = "navbarWrapper";
+    }
+  };
 
   render() {
     return (
-      <div id="navbarWrapper">
-        <motion.div
-          animate={{ x: this.handleLocation() }}
-          className="navbarItemOutline"
-          style={{ borderColor: this.state.color }}
-        ></motion.div>
-        <NavbarItem to="/" item="Home" />
-        <NavbarItem to="/about" item="About" />
-        <NavbarItem to="/music" item="Music" />
-        <NavbarItem to="/contact" item="Contact" />
-        <div id="navbarSocialContent">Shit</div>
+      <div className="navbarWrapper">
+        <NavbarItem to="section1" item="Home" />
+        <NavbarItem to="section2" item="Music" offset={-250} />
+        <NavbarItem to="section3" item="About" />
+        <NavbarItem to="section4" item="Press" />
+        <NavbarItem to="section5" item="Contact" />
+        <a
+          className="navbarSocial"
+          href="https://open.spotify.com/artist/6YeSug3pqLlakGir5f3ViA?si=VDVpR2BoTPS113vblDqnqQ"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaSpotify style={{ width: 25, height: 25 }} />
+        </a>
+        <a
+          className="navbarSocial"
+          href="https://www.instagram.com/adimmusic/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaInstagram style={{ width: 25, height: 25 }} />
+        </a>
+        <a
+          className="navbarSocial"
+          href="https://twitter.com/adimahendru"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaTwitter style={{ width: 25, height: 25 }} />
+        </a>
+
+        <div id="navbarSocialContent"></div>
       </div>
     );
   }

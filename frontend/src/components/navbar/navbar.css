@@ -1,29 +1,45 @@
-.navbarItemOutline {
-  border: white;
-  border-style: solid;
-  border-width: 1px;
-  width: 85px;
-  height: 26px;
-  position: absolute;
+.navbarWrapper {
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 25px;
+  transition: background-color 0.5s;
+  z-index: 1;
 }
 
 .navbarItem {
   font-family: "Source Sans Pro";
   font-size: 21px;
   font-weight: 300;
-
   line-height: 1;
+  color: white;
+  position: relative;
 }
 
-#navbarWrapper {
-  width: 100vw;
-  position: fixed;
+.navbarItemUnder {
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  position: relative;
+  top: 2px;
+}
+
+.navbarSocial {
+  color: white;
   display: flex;
   align-items: center;
-  gap: 25px;
-  padding: 30px;
 }
 
-#navbarSocialContent {
-  margin-left: auto;
+.scroll {
+  background-color: white;
+}
+
+.scroll2 {
+  color: black;
+}
+
+.scroll3 {
+  background-color: black;
 }
