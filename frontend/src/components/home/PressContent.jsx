@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { motion } from "framer-motion";
 import ModalGroup from "../modal/Modal";
 import axios from "axios";
+import { Fade } from "react-reveal";
 
 class PressContent extends Component {
   state = {
@@ -43,51 +44,73 @@ class PressContent extends Component {
           close={() => this.setState({ open: false, articleOpen: false })}
         >
           <div>
-            <div className="mainHeader">
-              {this.state.articleOpen === false ? undefined : (
-                <div>
-                  <div>{this.state.articles[this.state.articleOpen].title}</div>
+            {this.state.articleOpen === false ? undefined : (
+              <div id="pressArticleWrapper">
+                <div className="mainHeader" id="pressArticleHeader">
+                  {this.state.articles[this.state.articleOpen].title}
                 </div>
-              )}
-            </div>
+                <span id="pressArticleAuthor">
+                  {this.state.articles[this.state.articleOpen].author}
+                </span>
+                <div
+                  id="pressArticleText"
+                  className="mainText"
+                  dangerouslySetInnerHTML={{
+                    __html: this.state.articles[this.state.articleOpen].text,
+                  }}
+                />
+                <a
+                  id="pressArticleLink"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={this.state.articles[this.state.articleOpen].link}
+                >
+                  Read the full article
+                </a>
+              </div>
+            )}
           </div>
         </ModalGroup>
         <div id="pressContent">
-          <div className="mainHeader" id="pressHeader">
-            Press
-          </div>
+          <Fade left>
+            <div className="mainHeader" id="pressHeader">
+              Press
+            </div>
+          </Fade>
           <div id="pressSquareWrapper">
-            {this.state.articles === undefined ? (
-              <div>Loading</div>
-            ) : (
-              this.state.articles.map((item, index) => {
-                return (
-                  <div key={index} className="pressSquareContent">
-                    <div className="pressSquare"></div>
-                    <motion.button
-                      className="pressButton"
-                      initial="rest"
-                      whileHover="hover"
-                      animate="rest"
-                      onClick={() =>
-                        this.setState({ open: true, articleOpen: index })
-                      }
-                    >
-                      <motion.div
-                        variants={textHighlight}
-                        className="mainText pressText"
+            <Fade right>
+              {this.state.articles === undefined ? (
+                <div>Loading</div>
+              ) : (
+                this.state.articles.map((item, index) => {
+                  return (
+                    <div key={index} className="pressSquareContent">
+                      <div className="pressSquare"></div>
+                      <motion.button
+                        className="pressButton"
+                        initial="rest"
+                        whileHover="hover"
+                        animate="rest"
+                        onClick={() =>
+                          this.setState({ open: true, articleOpen: index })
+                        }
                       >
-                        <span>{item.title}</span>
-                        <span style={{ fontWeight: 300 }}>
-                          {" "}
-                          - {item.author}
-                        </span>
-                      </motion.div>
-                    </motion.button>
-                  </div>
-                );
-              })
-            )}
+                        <motion.div
+                          variants={textHighlight}
+                          className="mainText pressText"
+                        >
+                          <span>{item.title}</span>
+                          <span style={{ fontWeight: 300 }}>
+                            {" "}
+                            - {item.author}
+                          </span>
+                        </motion.div>
+                      </motion.button>
+                    </div>
+                  );
+                })
+              )}
+            </Fade>
           </div>
         </div>
       </div>

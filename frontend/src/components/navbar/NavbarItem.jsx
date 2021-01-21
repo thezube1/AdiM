@@ -52,6 +52,7 @@ class NavbarItem extends Component {
     return (
       <Link
         to={this.props.to}
+        onClick={this.props.close}
         smooth={true}
         offset={this.props.offset}
         activeClass="active"

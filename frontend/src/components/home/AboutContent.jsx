@@ -7,18 +7,20 @@ class AboutContent extends Component {
   render() {
     return (
       <div id="mainAboutWrapper">
-        <Zoom>
-          <img src={aditya_boat} id="mainAboutImage" alt="aditya random" />
-          <div id="mainAboutContent">
-            <div className="mainHeader" id="mainAboutHeader">
-              About
+        <div id="mainAboutContent">
+          <Zoom>
+            <img src={aditya_boat} id="mainAboutImage" alt="aditya random" />
+            <div id="mainAboutTextWrapper">
+              <div className="mainHeader" id="mainAboutHeader">
+                About
+              </div>
+              <div className="mainText" id="mainAboutText">
+                Hailing from Orlando, Florida, Aditya Mahendru raps about the
+                bullshit that goes on in his life, and the world.
+              </div>
             </div>
-            <div className="mainText" id="mainAboutText">
-              Hailing from Orlando, Florida, Aditya Mahendru raps about the
-              bullshit that goes on in his life, and the world.
-            </div>
-          </div>
-        </Zoom>
+          </Zoom>
+        </div>
       </div>
     );
   }

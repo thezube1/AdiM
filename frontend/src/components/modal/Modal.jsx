@@ -17,7 +17,7 @@ class ModalGroup extends Component {
             <button id="modalExitWrapper" onClick={() => this.props.close()}>
               <VscChromeClose style={{ height: 40, width: 40 }} />
             </button>
-            <div>{this.props.children}</div>
+            {this.props.children}
           </div>
         </Fade>
       </Modal>

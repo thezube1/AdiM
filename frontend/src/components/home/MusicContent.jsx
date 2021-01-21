@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactPlayer from "react-player";
 import { Fade, Zoom } from "react-reveal";
-import { FaSoundcloud, FaSpotify } from "react-icons/fa";
+import { FaSoundcloud, FaSpotify, FaBandcamp } from "react-icons/fa";
 
 class MusicContent extends Component {
   state = {
@@ -49,6 +49,21 @@ class MusicContent extends Component {
                   </a>
                   <a
                     className="musicLink"
+                    href="https://adimahendru.bandcamp.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaBandcamp
+                      style={{
+                        width: 70,
+                        height: 70,
+                        lineHeight: 1,
+                        color: "rgb(254, 80, 0)",
+                      }}
+                    />
+                  </a>
+                  <a
+                    className="musicLink"
                     href="https://soundcloud.com/adimahendru"
                     target="_blank"
                     rel="noreferrer"
@@ -78,20 +93,25 @@ class MusicContent extends Component {
                 </div>
                 <div>
                   <iframe
-                    src="https://open.spotify.com/embed/track/6OyDjQiFgIX4JnnfQ9zYf8"
-                    width="300"
-                    height="380"
-                    frameborder="0"
-                    allowtransparency="true"
-                    allow="encrypted-media"
-                  ></iframe>
+                    style={{ border: 0, width: 300, height: 300 }}
+                    src="https://bandcamp.com/EmbeddedPlayer/album=1686741501/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+                    seamless
+                  >
+                    <a href="https://adimahendru.bandcamp.com/album/forever-working-title">
+                      Forever Working Title by Adi M
+                    </a>
+                  </iframe>
                 </div>
                 <div>
-                  <ReactPlayer
-                    width={300}
-                    height={300}
-                    url="https://soundcloud.com/adimahendru/cycle"
-                  />
+                  <iframe
+                    style={{ border: 0, width: 300, height: 300 }}
+                    src="https://bandcamp.com/EmbeddedPlayer/track=3929755664/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
+                    seamless
+                  >
+                    <a href="https://adimahendru.bandcamp.com/track/the-next-winner">
+                      The Next Winner by Adi M
+                    </a>
+                  </iframe>
                 </div>
               </div>
             </div>
@@ -104,6 +124,7 @@ class MusicContent extends Component {
               <ReactPlayer
                 url="https://www.youtube.com/watch?v=LXAIsRJO96Y"
                 width={this.state.width <= 650 ? 350 : 650}
+                controls={true}
                 style={{
                   border: "black",
                   borderStyle: "solid",
