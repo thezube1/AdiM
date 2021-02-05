@@ -137,6 +137,8 @@ html {
   margin-right: 20px;
   line-height: 1;
   margin-bottom: 20px;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .musicLink {
@@ -353,8 +355,6 @@ html {
   }
   #mainAboutTextWrapper {
     width: max-content;
-  }
-  #textWrapper {
   }
 }
 
