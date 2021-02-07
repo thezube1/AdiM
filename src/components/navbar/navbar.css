@@ -16,14 +16,6 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  display: -webkit-flex;
-  display: -webkit-box;
-  display: -moz-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
   padding: 25px;
   transition: background-color 0.5s;
   z-index: 1;
@@ -86,14 +78,8 @@
     display: none;
   }
   #navbarBurgerWrapper {
-    display: -webkit-flex;
-    display: -webkit-box;
-    display: -moz-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
+    display: grid;
+    grid-row-gap: 7px;
     cursor: pointer;
     z-index: 5;
     position: fixed;
@@ -102,8 +88,10 @@
   }
   .navbarItem {
     color: black;
+    margin-bottom: 20px;
   }
   .navbarSocial {
     color: black;
+    margin-bottom: 20px;
   }
 }
