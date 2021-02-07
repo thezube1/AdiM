@@ -86,6 +86,11 @@
     display: none;
   }
   #navbarBurgerWrapper {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     gap: 7px;
