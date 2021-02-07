@@ -4,7 +4,7 @@ import { Canvas, useFrame } from "react-three-fiber";
 import { OrbitControls } from "@react-three/drei";
 import Shrikhand from "./Shrikhand.json";
 
-const Text = () => {
+const Text = (props) => {
   const Text1 = (props) => {
     const mesh = useRef();
 
@@ -29,10 +29,12 @@ const Text = () => {
       <ambientLight />
       <pointLight position={[20, 20, 20]} />
       <Text1 position={[-6.5, -1, 0]} />
+
       <OrbitControls
         enableZoom={false}
         minDistance={10}
         enablePan={false}
+        enableRotate={props.width > 700 ? true : false}
         autoRotate={true}
         autoRotateSpeed={2}
       />

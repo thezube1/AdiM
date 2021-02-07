@@ -16,6 +16,19 @@ class App extends Component {
   state = {
     open: true,
     loading: true,
+    width: 1000,
+  };
+
+  componentDidMount() {
+    window.addEventListener("resize", this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleResize);
+  }
+
+  handleResize = () => {
+    this.setState({ width: window.innerWidth });
   };
 
   render() {
@@ -87,7 +100,7 @@ class App extends Component {
             <div id="mainBackground">
               <Fade left>
                 <div id="textWrapper">
-                  <Text />
+                  <Text width={this.state.width} />
                 </div>
               </Fade>
               {/* <Fade bottom>
