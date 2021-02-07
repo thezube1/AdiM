@@ -2,7 +2,14 @@ import React, { Component } from "react";
 import "./navbar.css";
 import NavbarItem from "./NavbarItem";
 
-import { FaInstagram, FaTwitter, FaSpotify } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaTwitter,
+  FaSpotify,
+  FaFacebookSquare,
+  FaYoutube,
+  FaApple,
+} from "react-icons/fa";
 
 class Navbar extends Component {
   state = {
@@ -133,12 +140,29 @@ class Navbar extends Component {
               </a>
               <a
                 className="navbarSocial"
+                href="https://music.apple.com/ng/artist/adi-m/id1477720835"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaApple style={{ width: 25, height: 25 }} />
+              </a>
+              <a
+                className="navbarSocial"
+                href="https://www.youtube.com/channel/UCtBzo_uFp0boFQbF8ujmbcA"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaYoutube style={{ width: 25, height: 25 }} />
+              </a>
+              <a
+                className="navbarSocial"
                 href="https://www.instagram.com/adimmusic/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FaInstagram style={{ width: 25, height: 25 }} />
               </a>
+
               <a
                 className="navbarSocial"
                 href="https://twitter.com/adimahendru"
@@ -146,6 +170,14 @@ class Navbar extends Component {
                 rel="noreferrer"
               >
                 <FaTwitter style={{ width: 25, height: 25 }} />
+              </a>
+              <a
+                className="navbarSocial"
+                href="https://twitter.com/adimahendru"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaFacebookSquare style={{ width: 25, height: 25 }} />
               </a>
 
               <div id="navbarSocialContent"></div>
