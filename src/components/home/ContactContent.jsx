@@ -13,7 +13,7 @@ class ContactContent extends Component {
           </div>
           <div id="contactEnvelope">
             <BsEnvelope
-              style={{ color: "rgb(25, 25, 25)", width: 50, height: 50 }}
+              style={{ color: "rgb(25, 25, 25)", width: 40, height: 40 }}
             />
             <div id="contactMailText">adimahendru96@gmail.com</div>
           </div>

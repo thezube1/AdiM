@@ -149,6 +149,7 @@ html {
 
 .musicLink {
   color: black;
+  margin-right: 25px;
 }
 
 #musicVideo {
@@ -158,9 +159,7 @@ html {
 }
 
 #musicLinkWrapper {
-  display: flex;
-  gap: 25px;
-  width: max-content;
+  display: inline;
 }
 
 #contactWrapper {
@@ -172,10 +171,11 @@ html {
 
 #contactContent {
   display: grid;
-  justify-content: center;
+  justify-items: center;
 }
 
 #contactTitle {
+  width: max-content;
   text-align: center;
 }
 
@@ -193,6 +193,7 @@ html {
 }
 
 #pressWrapper {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -203,9 +204,11 @@ html {
 
 #pressHeader {
   margin-bottom: 50px;
+  width: max-content;
 }
 
 #pressSquareWrapper {
+  width: max-content;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -348,9 +351,11 @@ html {
   #mainAboutContent {
     display: flex;
     flex-direction: column-reverse;
-    width: max-content;
+    width: min-content;
+    grid-template-columns: none;
   }
   #mainAboutImage {
+    margin-top: 20px;
     max-width: 500px;
     width: 90%;
   }
@@ -370,6 +375,12 @@ html {
 }
 
 @media screen and (max-width: 650px) {
+  #contactMailText {
+    font-size: 24px;
+  }
+  .musicLink {
+    margin-right: 10px;
+  }
   #backgroundText {
     font-size: 240px;
     bottom: -70px;
@@ -378,9 +389,10 @@ html {
     font-size: 140px;
   }
 
-  #musicLinkWrapper {
-    display: flex;
-    gap: 20px;
-    justify-self: center;
+  #mainAboutText {
+    width: 300px;
+  }
+  .pressText {
+    width: 300px;
   }
 }

@@ -50,3 +50,12 @@
   height: 1px;
   background-color: rgb(247, 199, 203);
 }
+
+@media screen and (max-width: 670px) {
+  #featuredTitle {
+    font-size: 50px;
+  }
+  #featuredBar {
+    width: 200px;
+  }
+}
