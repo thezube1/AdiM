@@ -34,10 +34,8 @@ const Text = (props) => {
         enableZoom={false}
         minDistance={10}
         enablePan={false}
-        enableRotate={props.width > 700 ? true : false}
         autoRotate={true}
         autoRotateSpeed={2}
-        enabled={props.width > 700 ? true : false}
       />
     </Canvas>
   );
