@@ -1,0 +1,24 @@
+.featuredWrapper {
+  margin-top: 2px;
+  height: 90vh;
+  width: 100%;
+  background: url("../../photos/cover_art.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-size: cover;
+}
+
+.featuredContent {
+  width: 100%;
+  height: 100%;
+}
+
+#featuredTitle {
+  font-family: "Shrikhand";
+  line-height: 1;
+  font-size: 100px;
+  color: rgb(247, 199, 203);
+  padding: 50px;
+}

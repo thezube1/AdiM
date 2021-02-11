@@ -112,6 +112,7 @@ html {
 #musicContentWrapper {
   display: grid;
   grid-template-columns: 1fr 1px 1fr;
+  grid-column-gap: 30px;
 }
 
 #musicSeperator {
@@ -130,19 +131,20 @@ html {
 }
 
 #musicTitleWrapper {
-  display: flex;
+  display: grid;
+  justify-items: center;
   align-items: center;
-  gap: 25px;
 }
 
 #musicTitle {
-  color: rgb(0, 0, 0);
-  font-size: 120px;
+  color: rgb(31, 31, 31);
+  font-size: 300px;
   margin-right: 20px;
   line-height: 1;
   margin-bottom: 20px;
-  font-weight: 300;
+  font-weight: 600;
   font-style: normal;
+  margin-top: 70px;
 }
 
 .musicLink {
@@ -158,6 +160,7 @@ html {
 #musicLinkWrapper {
   display: flex;
   gap: 25px;
+  width: max-content;
 }
 
 #contactWrapper {
@@ -334,10 +337,10 @@ html {
   #musicTitle {
     text-align: center;
     margin: 0px;
+    margin-top: 0px;
   }
   #musicLinkWrapper {
-    margin-top: 20px;
-    margin-left: 60px;
+    align-items: center;
   }
 }
 
@@ -360,23 +363,24 @@ html {
   #mainAboutTextWrapper {
     width: max-content;
   }
+  #musicTitle {
+    text-align: center;
+    font-size: 200px;
+  }
 }
 
 @media screen and (max-width: 650px) {
-  #musicTitleWrapper {
-    display: grid;
-  }
   #backgroundText {
     font-size: 240px;
     bottom: -70px;
   }
+  #musicTitle {
+    font-size: 140px;
+  }
 
   #musicLinkWrapper {
     display: flex;
-    gap: 50px;
+    gap: 20px;
     justify-self: center;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-bottom: 30px;
   }
 }
