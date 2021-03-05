@@ -33,13 +33,27 @@ const FeaturedContent = () => {
             <div id="featuredBar"></div>
           </Zoom>
         </div>
-        <div
-          className="featuredHeader"
-          style={{ fontSize: 20, marginTop: 10, color: "rgb(247, 199, 203)" }}
-        >
-          Out now
+        <Fade right>
+          <div
+            className="featuredHeader"
+            style={{ fontSize: 20, marginTop: 10, color: "rgb(247, 199, 203)" }}
+          >
+            Out now
+          </div>
+        </Fade>
+        <div id="featuredListenWrapper">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://ffm.to/summerdaydream"
+            id="featuredListenText"
+            className="featuredHeader"
+          >
+            Listen
+          </a>
+          <div id="featuredListenBack"></div>
         </div>
-        <motion.a
+        {/*<motion.a
           variants={lineExtend}
           href="https://ffm.to/summerdaydream"
           className="featuredHeader"
@@ -59,7 +73,7 @@ const FeaturedContent = () => {
               className="featuredItemUnder"
             ></motion.div>
           </motion.div>
-        </motion.a>
+        </motion.a> */}
       </div>
     </div>
   );

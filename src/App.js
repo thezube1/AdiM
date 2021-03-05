@@ -4,9 +4,11 @@ import Navbar from "./components/navbar/Navbar";
 import { Fade } from "react-reveal";
 import Spinner from "./components/spinner/Spinner";
 
+// component imports
 import Text from "./components/3Dtext/text";
 import AboutContent from "./components/home/AboutContent";
 import MusicContent from "./components/home/MusicContent";
+import VideoContent from "./components/home/VideoContent";
 import FeaturedContent from "./components/home/FeaturedContent";
 import ContactContent from "./components/home/ContactContent";
 import PressContent from "./components/home/PressContent";
@@ -56,7 +58,9 @@ class App extends Component {
             <MusicContent
               toggleLoading={(e) => this.setState({ loading: e })}
             />
+            <VideoContent />
           </div>
+
           <div id="section3">
             <AboutContent />
           </div>

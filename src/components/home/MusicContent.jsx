@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactPlayer from "react-player";
+
 import { Fade, Zoom } from "react-reveal";
 import {
   FaSoundcloud,
@@ -188,22 +189,6 @@ class MusicContent extends Component {
               </div>
             </div>
           </Fade>
-
-          {/* <Fade right>
-            <div id="musicVideo">
-              <ReactPlayer
-                url="https://www.youtube.com/watch?v=LXAIsRJO96Y"
-                width={this.state.width <= 650 ? 350 : 650}
-                controls={true}
-                style={{
-                  border: "black",
-                  borderStyle: "solid",
-                  borderWidth: 1,
-                  justifySelf: "center",
-                }}
-              />
-            </div>
-          </Fade> */}
         </div>
       </div>
     );

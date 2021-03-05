@@ -13,11 +13,12 @@ class PressContent extends Component {
 
   componentDidMount() {
     axios
-      .get("data/press.json")
+      .get("http://localhost:1337/articles")
       .then((res) => this.setState({ articles: res.data }));
   }
 
   render() {
+    console.log(this.state.articles);
     const textHighlight = {
       rest: {
         transition: {
@@ -63,7 +64,7 @@ class PressContent extends Component {
                   id="pressArticleLink"
                   target="_blank"
                   rel="noreferrer"
-                  href={this.state.articles[this.state.articleOpen].link}
+                  href={this.state.articles[this.state.articleOpen].url}
                 >
                   Read the full article
                 </a>

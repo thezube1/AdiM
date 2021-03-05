@@ -123,7 +123,12 @@ class Navbar extends Component {
                 close={this.handleClose}
                 offset={-250}
               />
-              <NavbarItem to="section3" item="About" close={this.handleClose} />
+              <NavbarItem
+                offset={180}
+                to="section3"
+                item="About"
+                close={this.handleClose}
+              />
               <NavbarItem to="section4" item="Press" close={this.handleClose} />
               <NavbarItem
                 to="section5"

@@ -11,12 +11,17 @@ class ContactContent extends Component {
           <div className="mainHeader" id="contactTitle">
             Contact
           </div>
-          <div id="contactEnvelope">
-            <BsEnvelope
-              style={{ color: "rgb(25, 25, 25)", width: 40, height: 40 }}
-            />
-            <div id="contactMailText">adimahendru96@gmail.com</div>
-          </div>
+          <a
+            href="mailto: adimahendru96@gmail.com"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <div id="contactEnvelope">
+              <BsEnvelope
+                style={{ color: "rgb(25, 25, 25)", width: 40, height: 40 }}
+              />
+              <div id="contactMailText">adimahendru96@gmail.com</div>
+            </div>
+          </a>
         </div>
       </div>
     );

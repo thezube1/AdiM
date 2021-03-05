@@ -90,7 +90,7 @@ html {
 #mainAboutHeader {
   margin-top: 220px;
   width: max-content;
-  color: rgb(24, 172, 226);
+  color: rgb(247, 199, 203);
   font-size: 120px;
   position: relative;
   right: 90px;
@@ -137,7 +137,7 @@ html {
 }
 
 #musicTitle {
-  color: rgb(31, 31, 31);
+  color: rgb(247, 199, 203);
   font-size: 260px;
   margin-right: 20px;
   line-height: 1;
@@ -152,14 +152,30 @@ html {
   margin-right: 25px;
 }
 
-#musicVideo {
-  display: grid;
-  align-items: center;
-  margin-left: 50px;
-}
-
 #musicLinkWrapper {
   display: inline;
+}
+
+#videoTitle {
+  color: rgb(36, 36, 36);
+  font-size: 240px;
+  margin-right: 20px;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-style: normal;
+  margin-top: 70px;
+}
+
+#videoWrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#musicVideo {
+  display: grid;
+  margin-right: 100px;
 }
 
 #contactWrapper {
@@ -205,6 +221,7 @@ html {
 #pressHeader {
   margin-bottom: 50px;
   width: max-content;
+  color: rgb(140, 167, 255);
 }
 
 #pressSquareWrapper {
@@ -331,7 +348,11 @@ html {
   #musicSound {
     justify-content: center;
   }
+  #videoWrapper {
+    display: block;
+  }
   #musicVideo {
+    margin-right: 0px;
     margin-left: 0px;
   }
   #musicSeperator {
